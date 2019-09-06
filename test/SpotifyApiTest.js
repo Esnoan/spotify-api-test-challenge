@@ -6,7 +6,6 @@ const { expect } = chai;
 
 describe('Spotify Api Test', () => {
   it('Auth test', async () => {
-    // Client Credentials Flow
     const auth = Buffer.from(`${process.env.CLIENT_ID}:${process.env.CLIENT_SECRET}`).toString('base64');
     const response = await agent
       .post('https://accounts.spotify.com/api/token')
